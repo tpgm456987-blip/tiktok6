@@ -1,3 +1,4 @@
+> コード:
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -64,3 +65,186 @@
 /* ── GIFTS ── */
 .gifts { padding: 36px 24px; }
 .gift-card { background: var(--white); border: 1px solid rgba(184,134,11,0.
+
+> コード:
+1); border-radius: 16px; padding: 22px 20px; margin-bottom: 14px; display: flex; gap: 16px; align-items: flex-start; box-shadow: var(--shadow); transition: transform 0.25s, box-shadow 0.25s; }
+.gift-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.gift-card-icon { flex-shrink: 0; width: 48px; height: 48px; background: linear-gradient(145deg, #faf0da, #f3e2be); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.gift-card-num { font-family: 'Cormorant Garamond', serif; font-size: 12px; font-weight: 700; color: var(--gold); letter-spacing: 0.08em; margin-bottom: 2px; }
+.gift-card-title { font-size: 15px; font-weight: 800; color: var(--brown); margin-bottom: 3px; line-height: 1.4; }
+.gift-card-desc { font-size: 12px; color: var(--brown-light); line-height: 1.6; }
+
+/* ── WHY FREE ── */
+.why { padding: 32px 24px; background: var(--bg-warm); }
+.why-box { background: var(--white); border-radius: 16px; padding: 24px 20px; box-shadow: var(--shadow); }
+.why-box p { font-size: 14px; color: var(--brown-mid); line-height: 1.85; }
+.why-box p + p { margin-top: 12px; }
+.why-box strong { color: var(--brown); }
+
+/* ── CTA ── */
+.cta-section { padding: 40px 24px 36px; text-align: center; background: linear-gradient(170deg, var(--bg) 0%, var(--cream) 100%); position: relative; }
+.cta-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 18px; background: #06C755 !important; color: #fff !important; font-size: 17px; font-weight: 900; border: none; border-radius: 60px; cursor: pointer; text-decoration: none; box-shadow: 0 6px 28px rgba(6,199,85,0.3); transition: all 0.25s; position: relative; overflow: hidden; -webkit-appearance: none; }
+.cta-btn:hover { background: #05b34c !important; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(6,199,85,0.4); }
+.cta-btn svg { width: 22px; height: 22px; flex-shrink: 0; fill: currentColor; }
+.cta-btn .pulse { position: absolute; inset: 0; border-radius: 60px; border: 2px solid rgba(255,255,255,0.4); animation: pulse 2s ease-out infinite; }
+.copy-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 14px; margin-top: 10px; background: #fff !important; color: #3d2e1e !important; font-size: 14px; font-weight: 700; border: 2px solid #e0d6c4; border-radius: 60px; cursor: pointer; text-decoration: none; }
+.toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-80px); background: #3d2e1e; color: #fff; padding: 12px 24px; border-radius: 100px; font-size: 13px; font-weight: 700; z-index: 9999; opacity: 0; transition: all 0.3s ease; }
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.tiktok-tip { font-size: 12px; color: var(--brown-light); margin-top: 10px; line-height: 1.6; text-align: center; display: none; }
+.is-tiktok .tiktok-tip { display: block; }
+.sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(250,248,244,0.96); backdrop-filter: blur(12px); border-top: 1px solid var(--cream); padding: 12px 20px; z-index: 100; transform: translateY(100%); transition: transform 0.4s ease; }
+.sticky-bar.visible { transform: translateY(0); }
+footer { text-align: center; padding: 20px 24px 100px; font-size: 11px; color: var(--brown-light); opacity: 0.5; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.12); } }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes sparkle { 0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); } 50% { opacity: 0.6; transform: scale(0.85) rotate(15deg); } }
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.
+
+> コード:
+methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+  // 【更新箇所】新しいTikTokピクセルID
+  ttq.load('D7E8H4BC77UFLDKDT8NG');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+</head>
+<body>
+<div class="container">
+
+  <section class="hero">
+    <div class="ribbon"><span class="dot"></span>期間限定プレゼント配布中</div>
+    <div class="hero-gift-icon">🎁</div>
+    <h1>TikTokを見てくれた<br>あなたへ<span class="gold">特別な</span><br><span class="highlight">プレゼント</span>をご用意しました</h1>
+    <p class="hero-sub">LINE登録するだけで<br>今すぐ無料でお届けします</p>
+  </section>
+
+  <div class="divider"><span>&#9830;</span></div>
+
+  <section class="gifts fade-in">
+    <div class="section-eyebrow">Special Gift</div>
+    <h2 class="section-title">選ばれる3つのポイント</h2>
+    <div class="gift-card">
+      <div class="gift-card-icon">⚡</div>
+      <div>
+        <div class="gift-card-num">POINT 01</div>
+        <div class="gift-card-title">最短5分で受付完了</div>
+        <div class="gift-card-desc">面倒な手続きは一切なし。LINEから最短5分でサクッと受付できます</div>
+      </div>
+    </div>
+    <div class="gift-card">
+      <div class="gift-card-icon">🔓</div>
+      <div>
+        <div class="gift-card-num">POINT 02</div>
+        <div class="gift-card-title">手数料など一切不要</div>
+        <div class="gift-card-desc">手数料・登録料・年会費など、費用は一切かかりません。</div>
+      </div>
+    </div>
+    <div class="gift-card">
+      <div class="gift-card-icon">🛡️</div>
+      <div>
+        <div class="gift-card-num">POINT 03</div>
+        <div class="gift-card-title">安心のサポート体制</div>
+        <div class="gift-card-desc">わからないことがあればLINEでいつでもご相談いただけます</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 8px 24px 28px; text-align: center;" class="fade-in">
+    <a href="javascript:void(0)" onclick="openLine()" class="cta-btn" id="mainCta">
+      <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      プレゼントを受け取る
+      <span class="pulse"></span>
+    </a>
+    <button onclick="copyLine()" class="copy-btn">📋 LINEのURLをコピーして開く</button>
+    <p class="tiktok-tip">※ TikTokアプリ内では直接開けない場合があります。コピーしてブラウザに貼り付けてください。</p>
+  </section>
+
+  <section class="why fade-in">
+    <div class="section-eyebrow">Why Free?</div>
+    <h2 class="section-title">なぜ無料なの？</h2>
+    <div class="why-box">
+
+> コード:
+<p>TikTokで私を知ってくださった方に、まずは価値を感じていただきたいという想いから特別にご用意しました。</p>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 All Rights Reserved.</footer>
+</div>
+
+<div class="sticky-bar" id="stickyBar">
+  <a href="javascript:void(0)" onclick="openLine()" class="cta-btn">
+    プレゼントを受け取る
+    <span class="pulse"></span>
+  </a>
+</div>
+
+<div class="toast" id="toast">✅ URLをコピーしました！</div>
+
+<script>
+  // LINE URLの設定
+  var LINE_URL = 'https://lin.ee/zToU9X7';
+
+  // TikTok検知
+  var ua = navigator.userAgent || '';
+  if (/TikTok|BytedanceWebview/i.test(ua)) {
+    document.body.classList.add('is-tiktok');
+  }
+
+  // TikTokピクセル発火関数
+  function trackTiktokConversion() {
+    if (typeof ttq !== 'undefined') {
+      ttq.track('Contact');
+    }
+  }
+
+  // LINEを開く
+  function openLine() {
+    trackTiktokConversion();
+    setTimeout(function() {
+      window.location.href = LINE_URL;
+    }, 300);
+  }
+
+  // URLコピー
+  function copyLine() {
+    trackTiktokConversion();
+    var ta = document.createElement('textarea');
+    ta.value = LINE_URL;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 3000);
+  }
+
+  // スクロールアニメーション & 追従ボタン制御
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { obs.observe(el); });
+
+  var sticky = document.getElementById('stickyBar');
+  var mainCta = document.getElementById('mainCta');
+  new IntersectionObserver(function(entries) {
+    sticky.classList.toggle('visible', !entries[0].isIntersecting);
+  }, { threshold: 0 }).observe(mainCta);
+</script>
+
+</body>
+</html>
